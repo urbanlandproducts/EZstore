@@ -9,7 +9,7 @@ const Header = () => {
     return  <header className="w-full border-b">
         <div className="wrapper flex-betweeen">
             <div className="flex-start">
-                <Link href='/' className="flex-start">
+                <Link href='/' className="flex-start ml-4">
                     <Image 
                         src='/images/logo.svg' 
                         alt={`${APP_NAME} logo`} 
@@ -19,8 +19,7 @@ const Header = () => {
                     />
                     <span className="hidden lg:block font-bold text-2x1 ml-3">
                         {APP_NAME}
-                    </span>
-                    
+                    </span>                   
                 </Link>
             </div>
             <div className="spac-x-2">
