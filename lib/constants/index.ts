@@ -1,4 +1,3 @@
-import { preconnect } from "react-dom"
 
 export const APP_NAME: string = process.env.NEXT_PUBLIC_APP_NAME || 'Prostore'
 export const APP_DESCRIPTION: string = process.env.NEXT_PUBLIC_APP_DESCRIPTION || 'Modern Ecommerce Online Retailer'
