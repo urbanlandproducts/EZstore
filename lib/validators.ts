@@ -5,7 +5,7 @@ const currency = z.string().refine((value) => {
     return /^\d+(\.\d{2})?$/.test(formatNumberWithDecimal(Number(value))), 
      "Price must have at least two decimal places"
  })
-// Schema for inserting products
+// schema for inserting products
 export const insertProductSchema = z.object({
     name: z.string().min(3, "Name must be at least 3 characters"),
     slug: z.string().min(3, "Slug must be at least 3 characters"),
@@ -18,4 +18,10 @@ export const insertProductSchema = z.object({
     banner: z.string().nullable(),
     price: currency,
 
+})
+
+// user sign in schema
+export const signInFormSchema = z.object({
+    email: z.string().email("Invalid email address"),
+    password: z.string().min(6, "password must be at least 6 characters")
 })
